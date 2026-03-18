@@ -1,6 +1,18 @@
 * This repository created for expense project. We have frontend with nginx server, backend with nodejs server, db with mysql server. 
 
-# Installing Roboshop Docker:
+* We are running mysql, backend, frontend images in one server. 
+Login into backend server:
+```
+apt update
+```
+```
+apt install default-mysql-client
+```
+```
+mysql -h mysql -u root -pExpenseApp@1
+```
+
+# Installing Expense Docker:
 * creating docker images
 ```
 for i in mysql backend frontend ; do cd $i ; docker build -t $i:v1.1 . ; cd ..; done
